@@ -16,7 +16,7 @@ public class Coordinate3D implements Coordinate {
 	}
 	
 	public double distance(Object input) {
-		if(input.getClass().equals(Coordinate1D.class)){
+		if(input.getClass().equals(Coordinate3D.class)){
 			return Math.sqrt(
 					(((Coordinate3D)input).pos[0]-this.pos[0])*(((Coordinate3D)input).pos[0]-this.pos[0])+
 					(((Coordinate3D)input).pos[1]-this.pos[1])*(((Coordinate3D)input).pos[1]-this.pos[1])+

@@ -17,7 +17,9 @@ public class Coordinate1D implements Coordinate{
 		if(input.getClass().equals(Coordinate1D.class)){
 			return (double)Math.abs(((Coordinate1D)input).pos[0] - this.pos[0]);
 		}
-		return (double)-1;
+		else{
+			throw new IllegalArgumentException();
+		}
 	}
 
 	public void label(String input) {

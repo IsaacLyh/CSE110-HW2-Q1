@@ -28,8 +28,24 @@ public class Main {
 	System.out.println(output4.toString());
 	System.out.println(output5.toString());
 	System.out.println(output6.toString());
-	//
+	//test For Dist
+	System.out.println(output1.distance(output2) + " 1D and 1D");
+	try{
+		System.out.println(output1.distance(output3)+" 1d and 2D");
+	}
+	catch(IllegalArgumentException e){
+		System.out.println("IllegalArgument -- Type");
+	}
 	
+	System.out.println(output3.distance(output4)+" 2D and 2D");
+	
+	try{
+		System.out.println(output3.distance(output5) + "2D and 3D");
+	}
+	catch(IllegalArgumentException e){
+		System.out.println("IllegalArgument -- Type");
+	}
+	System.out.println(output5.distance(output6) + " 3D and 3D");
 	}
 	
 }

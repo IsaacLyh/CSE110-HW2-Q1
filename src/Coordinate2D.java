@@ -15,13 +15,15 @@ public class Coordinate2D implements Coordinate{
 	}
 	
 	public double distance(Object input) {
-		if(input.getClass().equals(Coordinate1D.class)){
+		if(input.getClass().equals(Coordinate2D.class)){
 			return Math.sqrt(
-					(((Coordinate3D)input).pos[0]-this.pos[0])*(((Coordinate3D)input).pos[0]-this.pos[0])+
-					(((Coordinate3D)input).pos[1]-this.pos[1])*(((Coordinate3D)input).pos[1]-this.pos[1])
+					(((Coordinate2D)input).pos[0]-this.pos[0])*(((Coordinate2D)input).pos[0]-this.pos[0])+
+					(((Coordinate2D)input).pos[1]-this.pos[1])*(((Coordinate2D)input).pos[1]-this.pos[1])
 					);
 		}
-		return -1;
+		else{
+			throw new IllegalArgumentException();
+		}
 	}
 
 	public void label(String input) {
